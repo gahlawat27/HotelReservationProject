@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Login Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome, Shrey</h1>
+    <a href="javascript:void(0)" id="logout-link">Logout</a>
+  </header>
+
+  <div class="dashboard">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#orders">Orders</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to your dashboard, Shrey! Here's your hotel summary:</p>
+        <div class="dummy-data">
+          <!-- Content for the Home section -->
+        </div>
+      </section>
+
+      <section id="profile">
+        <h2>Profile</h2>
+        <p>Here's your profile information:</p>
+        <div class="dummy-data">
+          <!-- Content for the Profile section -->
+        </div>
+      </section>
+
+      <section id="orders">
+        <h2>Orders</h2>
+        <h3>Previous Bookings</h3>
+        <div class="dummy-data">
+          <table>
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Room</th>
+                <th>Check-in Date</th>
+                <th>Check-out Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>101</td>
+                <td>Deluxe Suite</td>
+                <td>2023-07-20</td>
+                <td>2023-07-25</td>
+              </tr>
+              <tr>
+                <td>102</td>
+                <td>Standard Room</td>
+                <td>2023-08-05</td>
+                <td>2023-08-10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Upcoming Bookings</h3>
+        <div class="dummy-data">
+          <table>
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Room</th>
+                <th>Check-in Date</th>
+                <th>Check-out Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>103</td>
+                <td>Executive Suite</td>
+                <td>2023-09-02</td>
+                <td>2023-09-05</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Recent Orders</h3>
+        <div class="dummy-data">
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Item</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Order 123</td>
+                <td>Product A</td>
+                <td>$50</td>
+              </tr>
+              <tr>
+                <td>Order 124</td>
+                <td>Product B</td>
+                <td>$30</td>
+              </tr>
+              <tr>
+                <td>Order 125</td>
+                <td>Product C</td>
+                <td>$25</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="settings">
+        <h2>Settings</h2>
+        <p>You can configure your settings here.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("logout-link").addEventListener("click", function() {
+      logout();
+    });
+
+    function logout() {
+      // Implement your logout functionality here, e.g., clear user session or token.
+      // For simplicity, we'll just redirect the user back to the home page (hotel.html).
+      window.location.href = "hotel.html";
+    }
+  </script>
+</body>
+</html>

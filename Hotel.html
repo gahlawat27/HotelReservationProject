@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotel Reservation</title>
+  <link rel="stylesheet" href="hotelstyles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+    <li><a href="hotel.html#home" target="_blank">Home</a></li>
+      <li><a href="hotel.html#room-search" target="_blank">Room Search</a></li>
+      <li><a href="hotel.html#hotel-info" target="_blank">Hotel Info</a></li>
+      <li><a href="hotel.html#login" target="_blank">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Page -->
+  <section id="home">
+    <div class="hero">
+      <h1>Welcome to Hotel Reservation</h1>
+      <p>Book your dream stay with us</p>
+    </div>
+    <!-- Add images and details here -->
+    <div class="image-grid">
+      <div class="image-item">
+        <img src="hotel_image_1.jpg" alt="Hotel Room 1">
+        <h3>Luxurious Rooms</h3>
+        <p>Relax and unwind in our spacious and beautifully designed rooms.</p>
+      </div>
+      <div class="image-item">
+        <img src="hotel_image_2.jpg" alt="Hotel Room 2">
+        <h3>Exquisite Dining</h3>
+        <p>Indulge in a culinary journey with our delectable dining options.</p>
+      </div>
+      <div class="image-item">
+        <img src="hotel_image_3.jpg" alt="Hotel Pool">
+        <h3>Refreshing Pool</h3>
+        <p>Enjoy a refreshing swim in our stunning pool with a picturesque view.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Room Search -->
+ <section id="room-search">
+    <h2>Room Search</h2>
+    <!-- Search criteria form -->
+    <form id="search-form">
+      <!-- Add your room search form elements here -->
+      <input type="text" placeholder="Check-in Date" id="checkin-date">
+      <input type="text" placeholder="Check-out Date" id="checkout-date">
+      <input type="number" placeholder="Number of Guests" id="num-guests">
+      <button type="submit">Search</button>
+    </form>
+    <!-- Search results with room details, pricing, pictures, and booking feature -->
+    <div id="search-results">
+      <!-- Display search results here -->
+    </div>
+  </section>
+
+
+  <!-- Hotel Info -->
+  <section id="hotel-info">
+    <h2>Hotel Information</h2>
+    <!-- Hotel details, amenities, contact, and pictures -->
+    <div id="hotel-details">
+      <!-- Add hotel information here -->
+    </div>
+  </section>
+
+  <!-- Login Page -->
+  <section id="login">
+    <h2>Login</h2>
+    <!-- Login forms for employees and customers -->
+    <div id="customer-login">
+      <h3>Customer Login</h3>
+      <form id="customer-login-form">
+        <!-- Add customer login form elements here -->
+        <input type="text" placeholder="username" id="customer-username">
+        <input type="password" placeholder="password" id="customer-password">
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div id="employee-login">
+      <h3>Employee Login</h3>
+      <form id="employee-login-form">
+        <!-- Add employee login form elements here -->
+        <input type="text" placeholder="Username" id="emp-username">
+        <input type="password" placeholder="Password" id="emp-password">
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us: email@example.com | Phone: +1 123-456-7890</p>
+  </footer>
+ <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+ <script src="script.js"></script>
+<script>
+    document.getElementById("customer-login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission to handle it manually
+
+      const username = document.getElementById("customer-username").value;
+      const password = document.getElementById("customer-password").value;
+
+      // Replace the following conditional check with your actual authentication logic
+      if (username === "user" && password === "password") {
+        // Redirect to the customer dashboard page upon successful login
+        window.location.href = "customerdashboard.html";
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    });
+  </script>
+<script>
+    document.getElementById("employee-login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission to handle it manually
+
+      const username = document.getElementById("emp-username").value;
+      const password = document.getElementById("emp-password").value;
+
+      // Replace the following conditional check with your actual authentication logic
+      if (username === "user" && password === "password") {
+        // Redirect to the customer dashboard page upon successful login
+        window.location.href = "employeedashboard.html";
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>

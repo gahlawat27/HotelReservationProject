@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Dashboard</title>
+  <link rel="stylesheet" href="employeedashboard.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome, Employee</h1>
+    <a href="javascript:void(0)" id="logout-link">Logout</a>
+  </header>
+
+  <div class="dashboard">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#check-in">Check-in</a></li>
+        <li><a href="#check-out">Check-out</a></li>
+        <li><a href="#room-cleaning">Room Cleaning</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to the employee dashboard! Here's the hotel summary:</p>
+        <div class="dummy-data">
+          <!-- Content for the Home section -->
+        </div>
+      </section>
+
+      <section id="check-in">
+        <h2>Check-in</h2>
+        <p>Process guest check-ins here.</p>
+        <div class="dummy-data">
+          <!-- Content for the Check-in section -->
+          <label for="room-number">Room Number:</label>
+          <input type="text" id="room-number">
+
+          <label for="new-price">New Price:</label>
+          <input type="number" id="new-price">
+
+          <label for="discount">Discount (%):</label>
+          <input type="number" id="discount">
+
+          <button onclick="applyPriceChangeAndDiscount()">Apply Price Change & Discount</button>
+        </div>
+      </section>
+
+      <section id="check-out">
+        <h2>Check-out</h2>
+        <p>Process guest check-outs here.</p>
+        <div class="dummy-data">
+          <!-- Content for the Check-out section -->
+        </div>
+      </section>
+
+      <section id="room-cleaning">
+        <h2>Room Cleaning</h2>
+        <p>Track room cleaning status here.</p>
+        <div class="dummy-data">
+          <!-- Content for the Room Cleaning section -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("logout-link").addEventListener("click", function() {
+      logout();
+    });
+
+    function logout() {
+      // Implement your logout functionality here, e.g., clear employee session or token.
+      // For simplicity, we'll just redirect the employee back to the home page (hotel.html).
+      window.location.href = "hotel.html";
+    }
+
+    function applyPriceChangeAndDiscount() {
+      const roomNumber = document.getElementById("room-number").value;
+      const newPrice = parseFloat(document.getElementById("new-price").value);
+      const discount = parseFloat(document.getElementById("discount").value);
+
+      // Implement the logic to apply the price change and discount here
+      // For example, update the room price and store the discount in the booking record.
+
+      // For simplicity, we'll display an alert to indicate the changes applied.
+      alert(`Room ${roomNumber}: Price changed to $${newPrice}, Discount applied: ${discount}%`);
+    }
+  </script>
+</body>
+</html>
